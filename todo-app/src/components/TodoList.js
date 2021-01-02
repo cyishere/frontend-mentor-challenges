@@ -26,7 +26,6 @@ const TodoList = ({ todos, setTodos }) => {
   };
 
   const clearCompletedTodos = () => {
-    console.log("ha");
     setTodos(todos.filter((todo) => !todo.completed));
     setFilteredTodos(todos.filter((todo) => !todo.completed));
     setFilterStatus("all");
