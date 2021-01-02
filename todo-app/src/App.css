@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Light Theme */
+  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-very-light-grayish-blue: hsl(236, 33%, 92%);
+  --color-light-grayish-blue: hsl(233, 11%, 84%);
+  --color-dark-grayish-blue: hsl(236, 9%, 61%);
+  --color-very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+  /* Dark Theme */
+  --color-very-dark-blue: hsl(235, 21%, 11%);
+  --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --color-dark-light-grayish-blue: hsl(234, 39%, 85%);
+  --color-dark-light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --color-dark-dark-grayish-blue: hsl(234, 11%, 52%);
+  --color-dark-very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --color-dark-very-dark-grayish-blue-hover: hsl(237, 14%, 26%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+input[type="text"],
+button {
+  font-family: "Josefin Sans", sans-serif, "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.wrapper.light {
+  background-color: var(--color-very-light-gray);
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: var(--color-dark-grayish-blue);
+}
+.wrapper.light input[type="checkbox"],
+.wrapper.light button {
+  color: var(--color-dark-grayish-blue);
+}
+
+.container {
+  width: 54rem;
+  margin: 0 auto;
+}
+
+/* Header Component */
+header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+.btn {
+  border: none;
+  background: transparent;
+}
+
+/* TodoForm Component */
+.form-control {
+  background-color: white;
+  width: 100%;
+  height: 6.4rem;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+}
+.checkbox {
+  display: flex;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.1rem solid var(--color-very-light-grayish-blue);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.form-control form {
+  width: 100%;
+}
+.todo-input {
+  font-size: 1.8rem;
+  border: none;
+}
+.todo-input:focus {
+  outline: none;
+}
+.form-control form .todo-input {
+  width: 100%;
+}
+
+/* TodoList Component */
+.todo-list-section {
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 4.8rem;
+  box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+  -webkit-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+  -moz-box-shadow: -1px 5px 20px 10px rgba(157, 162, 235, 0.3);
+}
+.todo-list {
+  list-style: none;
+}
+.todo-list li {
+  display: flex;
+  flex-direction: row;
+  height: 6.4rem;
+  justify-content: start;
+  align-items: center;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  gap: 2.4rem;
+  border-bottom: 0.1rem solid var(--color-very-light-grayish-blue);
+}
+.todo-list li input[type="checkbox"] {
+  display: none;
+}
+.todo-list li.completed .checkbox {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+.todo-list li.completed p {
+  color: var(--color-light-grayish-blue);
+  text-decoration-line: line-through;
+}
+
+.todo-filter-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+}
+.control-btn.group {
+  display: flex;
+  gap: 1rem;
+}
+.wrapper.light .btn.active {
+  color: var(--color-very-dark-grayish-blue);
+  font-weight: 700;
+}
+
+/* Footer Component */
+footer {
+  line-height: 1.5;
+  text-align: center;
+}
