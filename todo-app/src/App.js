@@ -22,7 +22,7 @@ function App() {
       <div className="container">
         <Header />
         <main>
-          <TodoForm />
+          <TodoForm todos={todos} setTodos={setTodos} />
           <TodoList todos={todos} />
         </main>
         <Footer />

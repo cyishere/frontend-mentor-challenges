@@ -1,20 +1,29 @@
-import React from "react";
+import { useState } from "react";
 import IconCheck from "../images/icon-check.svg";
 
 const TodoItem = ({ todo }) => {
-  const classes = todo.completed ? "completed" : "";
-  const checkIcon = todo.completed ? (
+  const [mutableTodo, setMutableTodo] = useState(todo);
+
+  const classes = mutableTodo.completed ? "completed" : "";
+  const checkIcon = mutableTodo.completed ? (
     <img src={IconCheck} alt="Completed" />
   ) : (
     ""
   );
+
+  const toggleCompleted = () => {
+    setMutableTodo({ ...mutableTodo, completed: !mutableTodo.completed });
+  };
+
   return (
     <li className={classes}>
-      <input type="checkbox" defaultChecked={todo.completed} />
+      <input type="checkbox" defaultChecked={mutableTodo.completed} />
       <div className="checkbox-border-wrap">
-        <span className="checkbox">{checkIcon}</span>
+        <span className="checkbox" onClick={toggleCompleted}>
+          {checkIcon}
+        </span>
       </div>
-      <p>{todo.content}</p>
+      <p>{mutableTodo.content}</p>
     </li>
   );
 };
