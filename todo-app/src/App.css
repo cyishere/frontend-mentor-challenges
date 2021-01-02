@@ -92,15 +92,29 @@ h1 {
   border-radius: 1rem;
   margin-bottom: 2.4rem;
 }
+.checkbox-border-wrap {
+  padding: 0.1rem;
+  background: var(--color-very-light-grayish-blue);
+  border-radius: 50%;
+}
+.checkbox-border-wrap:hover {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+}
 .checkbox {
   display: flex;
   width: 2.4rem;
   height: 2.4rem;
-  border: 0.1rem solid var(--color-very-light-grayish-blue);
-  border-radius: 50%;
+  border-radius: inherit;
+  background-color: white;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
+
 .form-control form {
   width: 100%;
 }
@@ -140,6 +154,9 @@ h1 {
 }
 .todo-list li input[type="checkbox"] {
   display: none;
+}
+.todo-list li.completed .checkbox-border-wrap {
+  background: transparent;
 }
 .todo-list li.completed .checkbox {
   background-image: linear-gradient(

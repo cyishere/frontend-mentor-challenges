@@ -11,7 +11,9 @@ const TodoItem = ({ todo }) => {
   return (
     <li className={classes}>
       <input type="checkbox" defaultChecked={todo.completed} />
-      <span className="checkbox">{checkIcon}</span>
+      <div className="checkbox-border-wrap">
+        <span className="checkbox">{checkIcon}</span>
+      </div>
       <p>{todo.content}</p>
     </li>
   );
