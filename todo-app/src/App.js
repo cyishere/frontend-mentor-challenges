@@ -23,7 +23,7 @@ function App() {
         <Header />
         <main>
           <TodoForm todos={todos} setTodos={setTodos} />
-          <TodoList todos={todos} />
+          <TodoList todos={todos} setTodos={setTodos} />
         </main>
         <Footer />
       </div>
