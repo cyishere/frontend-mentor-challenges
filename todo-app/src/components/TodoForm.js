@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const generateId = (todos) => {
   const ids = todos.map((todo) => todo.id);
