@@ -36,7 +36,7 @@ const TodoList = ({ todos, setTodos }) => {
   return (
     <section className="todo-list-section">
       {filteredTodos.length < 1 ? (
-        <p>There's no {textPlacer}</p>
+        <p className="info-text">There's no {textPlacer}</p>
       ) : (
         <ul className="todo-list">
           {filteredTodos.map((todo) => (

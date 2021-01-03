@@ -16,11 +16,14 @@ const data = [
 
 function App() {
   const [todos, setTodos] = useState(data);
+  const [themeLight, setThemeLight] = useState(true);
+
+  const themeClass = themeLight ? "light" : "dark";
 
   return (
-    <div className="wrapper light">
+    <div className={`wrapper ${themeClass}`}>
       <div className="container">
-        <Header />
+        <Header themeLight={themeLight} setThemeLight={setThemeLight} />
         <main>
           <TodoForm todos={todos} setTodos={setTodos} />
           <TodoList todos={todos} setTodos={setTodos} />
