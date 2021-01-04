@@ -14,14 +14,16 @@ const TodoForm = ({ todos, setTodos }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTodo = {
-      id: generateId(todos),
-      content: todoInput,
-      completed: false,
-    };
+    if (todoInput) {
+      const newTodo = {
+        id: generateId(todos),
+        content: todoInput.trim(),
+        completed: false,
+      };
 
-    setTodos([newTodo, ...todos]);
-    setTodoInput("");
+      setTodos([newTodo, ...todos]);
+      setTodoInput("");
+    }
   };
 
   return (
