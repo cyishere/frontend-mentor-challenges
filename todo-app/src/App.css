@@ -147,6 +147,10 @@ h1 {
 .form-control form {
   width: 100%;
 }
+.form-control form label,
+#submitNewTodo {
+  display: none;
+}
 .todo-input {
   font-size: 1.8rem;
   border: none;
@@ -200,6 +204,7 @@ h1 {
 .wrapper.dark li {
   border-bottom-color: var(--color-dark-very-dark-grayish-blue-hover);
 }
+.todo-list li label,
 .todo-list li input[type="checkbox"] {
   display: none;
 }

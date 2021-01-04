@@ -21,7 +21,13 @@ const TodoItem = ({ todo, todos, setTodos }) => {
 
   return (
     <li className={classes}>
-      <input type="checkbox" defaultChecked={mutableTodo.completed} />
+      <label htmlFor={`todoCheckbox-${todo.id}`}>Completed Checkbox</label>
+      <input
+        id={`todoCheckbox-${todo.id}`}
+        type="checkbox"
+        name="completed-checkbox"
+        defaultChecked={mutableTodo.completed}
+      />
       <div className="checkbox-border-wrap">
         <span className="checkbox" onClick={toggleCompleted}>
           {checkIcon}

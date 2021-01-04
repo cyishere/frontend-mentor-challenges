@@ -31,13 +31,19 @@ const TodoForm = ({ todos, setTodos }) => {
       </div>
 
       <form onSubmit={handleSubmit}>
+        <label htmlFor="todoInput">Add New Todo</label>
         <input
           type="text"
+          name="todo-input"
           className="todo-input"
+          id="todoInput"
           placeholder="Create a new todo..."
           value={todoInput}
           onChange={handleChange}
         />
+        <button id="submitNewTodo" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );
