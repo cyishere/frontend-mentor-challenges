@@ -46,6 +46,7 @@ button {
   padding-bottom: 5rem;
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: contain;
 }
 /* Theme LIGHT */
 .wrapper.light {
@@ -260,6 +261,9 @@ a:visited {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
+  .wrapper.light {
+    background-image: url(./images/bg-mobile-light.jpg);
+  }
   .todo-list-section {
     margin-bottom: 2.4rem;
   }
@@ -280,6 +284,9 @@ a:visited {
   }
 
   /* Dark Theme */
+  .wrapper.dark {
+    background-image: url(./images/bg-mobile-dark.jpg);
+  }
   .wrapper.dark .filter-control-for-mobile {
     background-color: var(--color-very-dark-desaturated-blue);
     box-shadow: -1px 5px 20px 10px rgba(37, 39, 60, 0.2);

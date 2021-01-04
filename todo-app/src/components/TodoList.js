@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import TodoFilterControl from "./TodoFilterControl";
 
-const TodoList = ({ todos, setTodos }) => {
+const TodoList = ({
+  todos,
+  setTodos,
+  filteredTodos,
+  filterStatus,
+  setFilterStatus,
+}) => {
   const [leftTodoCount, setLeftTodoCount] = useState(0);
-  const [filterStatus, setFilterStatus] = useState("all");
-  const [filteredTodos, setFilteredTodos] = useState(todos);
 
   useEffect(() => {
     const unCompletedTodos = todos.filter((todo) => !todo.completed);
@@ -16,7 +20,6 @@ const TodoList = ({ todos, setTodos }) => {
 
   const clearCompletedTodos = () => {
     setTodos(todos.filter((todo) => !todo.completed));
-    setFilteredTodos(todos.filter((todo) => !todo.completed));
     setFilterStatus("all");
   };
 
@@ -45,8 +48,6 @@ const TodoList = ({ todos, setTodos }) => {
             <TodoFilterControl
               filterStatus={filterStatus}
               setFilterStatus={setFilterStatus}
-              setFilteredTodos={setFilteredTodos}
-              todos={todos}
             />
           </div>
 
@@ -64,8 +65,6 @@ const TodoList = ({ todos, setTodos }) => {
           <TodoFilterControl
             filterStatus={filterStatus}
             setFilterStatus={setFilterStatus}
-            setFilteredTodos={setFilteredTodos}
-            todos={todos}
           />
         </div>
       </section>

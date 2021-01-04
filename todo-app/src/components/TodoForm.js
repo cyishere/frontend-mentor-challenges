@@ -1,12 +1,16 @@
 import { useState } from "react";
 
-const generateId = (todos) => {
-  const ids = todos.map((todo) => todo.id);
+const generateId = (array) => {
+  const ids = array.map((item) => item.id);
   return Math.max(...ids) + 1;
 };
 
 const TodoForm = ({ todos, setTodos }) => {
   const [todoInput, setTodoInput] = useState("");
+
+  const handleChange = (e) => {
+    setTodoInput(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +19,9 @@ const TodoForm = ({ todos, setTodos }) => {
       content: todoInput,
       completed: false,
     };
+
     setTodos([newTodo, ...todos]);
+    setTodoInput("");
   };
 
   return (
@@ -30,7 +36,7 @@ const TodoForm = ({ todos, setTodos }) => {
           className="todo-input"
           placeholder="Create a new todo..."
           value={todoInput}
-          onChange={(e) => setTodoInput(e.target.value)}
+          onChange={handleChange}
         />
       </form>
     </div>
