@@ -1,0 +1,199 @@
+/* ============= GOOGLE FONTS ========== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* ============= CSS VARIABLES ========== */
+:root {
+  --color-purple: hsl(275.7, 62.4%, 60.4%);
+  --color-purple-dark: hsl(245.8, 38.3%, 15.9%);
+  --color-dark: hsl(232.9, 45.9%, 7.3%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-text-primary: hsla(0, 0%, 100%, 0.6);
+  --color-text-secondary: hsla(0, 0%, 100%, 0.75);
+
+  --font-family-heading: "Inter", sans-serif;
+  --font-family-main: "Lexend Deca", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+/* ============= BASE ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-main);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-dark);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  max-width: 375px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============= CARD ========== */
+.card {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-purple-dark);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card > * {
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-white);
+  padding: 0 1rem;
+}
+.card__title em {
+  color: var(--color-purple);
+  font-style: normal;
+}
+
+.card__media {
+  order: -1;
+  position: relative;
+}
+
+.card__media::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--color-purple);
+  opacity: 0.5;
+}
+
+.card__media-picture {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.card__media-picture.mobile {
+  display: block;
+}
+
+.card__content {
+  padding: 0 1rem;
+}
+
+.card__status {
+  list-style: none;
+}
+
+.card__status li {
+  display: block;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.card__status li:last-child {
+  margin-bottom: 0;
+}
+
+.card__status li strong {
+  display: block;
+  color: var(--color-text-secondary);
+  text-transform: none;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.attribution {
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-text-secondary);
+}
+
+/* ============= FOR DESKTOP ========== */
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 1440px;
+    padding: 4rem;
+  }
+
+  .card {
+    max-width: 1110px;
+    position: relative;
+    padding: 3rem;
+    padding-right: calc(50% + 3rem);
+    text-align: left;
+  }
+
+  .card > * {
+    padding: 0;
+  }
+
+  .card__media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .card__media-picture {
+    min-height: 100%;
+  }
+
+  .card__media-picture.desktop {
+    display: block;
+  }
+
+  .card__status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  }
+
+  .card__status li {
+    margin-bottom: 0;
+  }
+
+  .attribution {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
