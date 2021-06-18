@@ -28,7 +28,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [https://fm-solutions.glitch.me/stats-card.html](https://fm-solutions.glitch.me/stats-card.html)
 
 ## My process
