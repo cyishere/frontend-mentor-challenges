@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --breakpointS: 375px;
+  --breakpointL: 1440px;
+
+  --color-red: hsl(0, 94%, 66%);
+  --color-blue: hsl(231, 69%, 60%);
+  --color-blue-gray: hsl(229, 8%, 60%);
+  --color-blue-dark: hsl(229, 31%, 21%);
+
+  --text-base: 1.125rem;
+
+  --font-main: "Rubik", sans-serif;
+  --font-regular: 400;
+  --font-medium: 500;
+
+  --gap: 1.875rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+}
+
+.button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*==================== HEADER =======================*/
+.header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-container {
+  padding: var(--gap);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar,
+.social-links {
+  display: none;
+}
+
+.header.open .navbar,
+.header.open .social-links {
+  display: block;
+}
+
+.control .button:hover {
+  color: var(--color-blue);
+}
+
+/*==================== ATTRIBUTION =======================*/
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+  background-color: hsl(60, 37%, 94%);
+  color: hsl(240, 2%, 30%);
+  border-radius: 4px;
+  padding: 4px 6px;
+  position: fixed;
+  right: 0.25rem;
+  bottom: 0.25rem;
+}
+.attribution a {
+  color: hsl(248, 74%, 47%);
+}
