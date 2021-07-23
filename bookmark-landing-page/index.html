@@ -40,7 +40,7 @@
       </nav>
 
       <!-- SOCIAL ICONS -->
-      <div class="social-links">
+      <div class="social-links text-center">
         <ul class="social-links__list">
           <li class="social-links__item"><a href="https://facebook.com" class="social-links__link"><i
                 class="fab fa-facebook-square"></i></a></li>
@@ -49,8 +49,8 @@
         </ul>
       </div>
 
-      <!-- SOCIAL ICONS -->
-      <div class="control">
+      <!-- CONTROL BUTTON -->
+      <div class="control text-right">
         <button class="button" type="button"><i class="fas fa-bars"></i></button>
 
         <!-- <i class="fas fa-times"></i> -->
@@ -58,13 +58,250 @@
     </div>
   </header>
 
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://cyishere.dev" target="_blank">CY</a>.
+  <!--========= HERO ==========-->
+  <section class="section grid hero">
+    <div class="section__content">
+      <h1 class="section__title">A Simple Bookmark Manager</h1>
+      <div class="section__description">
+        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites
+          load instantly. Try it for free.</p>
+      </div>
+      <div class="section__meta button-group">
+        <a href="#" class="button button-primary">Get it on Chrome</a>
+        <a href="#" class="button button-default">Get it on Firefox</a>
+      </div>
     </div>
+    <div class="hero__image">
+      <img src="/assets/images/illustration-hero.svg" alt="A Simple Bookmark Manager">
+      <div class="hero__image__decorator"></div>
+    </div>
+  </section>
+
+  <!--========= FEATURES ==========-->
+  <section class="section grid features">
+    <div class="section__content">
+      <h2 class="section__title">Features</h2>
+      <div class="section__description">
+        <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
+          your devices so you can access them on the go.</p>
+      </div>
+    </div>
+
+    <div class="section__content">
+      <ul class="features__list">
+        <li class="features__item active" data-feature="1"><span>Simple Bookmark</span></li>
+        <li class="features__item" data-feature="2"><span>Speedy Searching</span></li>
+        <li class="features__item" data-feature="3"><span>Easy Sharing</span></li>
+      </ul>
+    </div>
+
+    <div class="features__content active" id="feature1">
+      <div class="features__image">
+        <img src="/assets/images/illustration-features-tab-1.svg" alt="Simple Bookmark">
+        <div class="features__image__decorator"></div>
+      </div>
+      <div class="section__content">
+        <h3 class="section__title">Bookmark in one click</h3>
+        <div class="section__description">
+          <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
+            gives you complete control over how you manage your favourite sites.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="features__content" id="feature2">
+      <div class="features__image">
+        <img src="/assets/images/illustration-features-tab-2.svg" alt="Simple Bookmark">
+        <div class="features__image__decorator"></div>
+      </div>
+      <div class="section__content">
+        <h3 class="section__title">Intelligent search</h3>
+        <div class="section__description">
+          <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all
+            of your bookmarks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="features__content" id="feature3">
+      <div class="features__image">
+        <img src="/assets/images/illustration-features-tab-3.svg" alt="Simple Bookmark">
+        <div class="features__image__decorator"></div>
+      </div>
+      <div class="section__content">
+        <h3 class="section__title">Share your bookmarks</h3>
+        <div class="section__description">
+          <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
+            click of a button.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========= DOWNLOAD ==========-->
+  <section class="section download">
+    <div class="section__content">
+      <h2 class="section__title">Download the extension</h2>
+      <div class="section__description">
+        <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
+          prioritize.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="download__content card">
+        <div class="card__content">
+          <img src="/assets/images/logo-chrome.svg" alt="Chrome logo" class="icon">
+          <h3 class="card__title">Add to Chrome</h3>
+          <p class="card__description">Minimum version 62</p>
+        </div>
+
+        <div class="card__meta">
+          <a href="#" class="button button-primary">Add & Install Extension</a>
+        </div>
+      </div>
+
+      <div class="download__content card">
+        <div class="card__content">
+          <img src="/assets/images/logo-firefox.svg" alt="Firefox logo" class="icon">
+          <h3 class="card__title">Add to Firefox</h3>
+          <p class="card__description">Minimum version 55</p>
+        </div>
+
+        <div class="card__meta">
+          <a href="#" class="button button-primary">Add & Install Extension</a>
+        </div>
+      </div>
+
+      <div class="download__content card">
+        <div class="card__content">
+          <img src="/assets/images/logo-opera.svg" alt="Opera logo" class="icon">
+          <h3 class="card__title">Add to Opera</h3>
+          <p class="card__description">Minimum version 46</p>
+        </div>
+
+        <div class="card__meta">
+          <a href="#" class="button button-primary">Add & Install Extension</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--========= FAQ ==========-->
+  <section class="section fqa">
+    <div class="section__content">
+      <h2 class="section__title">Frequently Asked Questions</h2>
+      <div class="section__description">
+        <p>Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+        </p>
+      </div>
+    </div>
+
+    <ul class="fqa__content section__content">
+      <li class="fqa__item">
+        <div class="fqa__item-q">
+          <span class="fqa__item-q__text">What is Bookmark?</span>
+          <i class="fas fa-chevron-down icon"></i>
+        </div>
+        <div class="fqa__item-a">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla.
+            Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+      </li>
+
+      <li class="fqa__item">
+        <div class="fqa__item-q">
+          <span class="fqa__item-q__text">How can I request a new browser?</span>
+          <i class="fas fa-chevron-down icon"></i>
+        </div>
+        <div class="fqa__item-a">
+          <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.</p>
+          <p>Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
+            ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.</p>
+          <p>Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+      </li>
+
+      <li class="fqa__item">
+        <div class="fqa__item-q">
+          <span class="fqa__item-q__text">Is there a mobile app?</span>
+          <i class="fas fa-chevron-down icon"></i>
+        </div>
+        <div class="fqa__item-a">
+          <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+      </li>
+
+      <li class="fqa__item">
+        <div class="fqa__item-q">
+          <span class="fqa__item-q__text">What about other Chromium browsers?</span>
+          <i class="fas fa-chevron-down icon"></i>
+        </div>
+        <div class="fqa__item-a">
+          <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="fqa__meta">
+      <a href="#" class="button button-primary">More Info</a>
+    </div>
+  </section>
+
+  <!--========= CONTACT ==========-->
+  <section class="section contact">
+    <div class="section__content">
+      <p class="contact__meta">35,000+ already joined</p>
+      <h2 class="section__title">Stay up-to-date with what we’re doing</h2>
+      <form class="contact__form" id="contactForm">
+        <div class="form__control">
+          <label for="email">Email</label>
+          <input type="text" class="text-input" id="email" name="email" placeholder="Enter your email address">
+          <p class="form__message">Whoops, make sure it's an email</p>
+        </div>
+        <button type="submit" class="button button-danger">Contact Us</button>
+      </form>
+    </div>
+  </section>
+
+  <!--========= FOOTER ==========-->
+  <footer class="footer">
+    <div class="logo">
+      <img src="/assets/images/logo-bookmark-footer.svg" alt="Bookmark">
+    </div>
+
+    <nav class="nav-footer">
+      <ul class="nav-footer__list">
+        <li class="nav-footer__item">
+          <a href="#">Features</a>
+        </li>
+        <li class="nav-footer__item">
+          <a href="#">Pricing</a>
+        </li>
+        <li class="nav-footer__item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+      <div class="social-links">
+        <ul class="social-links__list">
+          <li class="social-links__item"><a href="https://facebook.com" class="social-links__link"><i
+                class="fab fa-facebook-square"></i></a></li>
+          <li class="social-links__item"><a href="https://twitter.com" class="social-links__link"><i
+                class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
   </footer>
+
+  <!--========= ATTRIBUTION ==========-->
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://cyishere.dev" target="_blank">CY</a>.
+  </div> -->
 
   <!--========= MAIN SCRIPT ==========-->
   <script src="/assets/js/main.js"></script>
