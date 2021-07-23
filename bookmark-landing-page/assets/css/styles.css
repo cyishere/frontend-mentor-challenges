@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 
 :root {
+  /* BREAKPOINTS */
+  --minWidth: 376px;
+  --maxWidth: 1440px;
+
   /* COLORS */
   --color-white: hsl(0, 100%, 100%);
   --color-red: hsl(0, 94%, 66%);
@@ -555,7 +559,7 @@ h1.section__title {
 
   .section,
   .footer__content {
-    max-width: var(--maxWidth);
+    /* max-width: var(--maxWidth); */
     margin-left: auto;
     margin-right: auto;
   }
@@ -626,7 +630,8 @@ h1.section__title {
   }
 
   .hero .section__content {
-    max-width: 50ch;
+    max-width: 70ch;
+    padding-left: calc((100vw - var(--maxWidth)) / 2);
   }
 
   .section__meta.button-group {
@@ -667,7 +672,7 @@ h1.section__title {
   }
 
   .features .features__content .section__content {
-    padding: 4rem;
+    padding-right: calc((100vw - var(--maxWidth)) / 2);
     width: calc(100% - 4rem);
     text-align: left;
   }
